@@ -1,9 +1,5 @@
 <script lang="ts">
-  type TaskData = {
-    id: string;
-    title: string;
-    state: "TASK_ARCHIVED" | "TASK_INBOX" | "TASK_PINNED";
-  };
+  import type { TaskData } from "../types";
 
   interface Props {
     /** Composition of the task */
