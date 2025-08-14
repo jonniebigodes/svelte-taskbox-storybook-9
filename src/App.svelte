@@ -1,4 +1,5 @@
-<script lang="ts">
+<!-- Before Screen section  -->
+<!-- <script lang="ts">
   import svelteLogo from "./assets/svelte.svg";
   import viteLogo from "/vite.svg";
   import Counter from "./lib/Counter.svelte";
@@ -46,4 +47,12 @@
   .read-the-docs {
     color: #888;
   }
-</style>
+</style> -->
+
+<!-- Screen section -->
+
+<script lang="ts">
+  import InboxScreen from "./lib/InboxScreen.svelte";
+</script>
+
+<InboxScreen />
