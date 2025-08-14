@@ -6,7 +6,7 @@
 
   import * as TaskStories from "./Task.stories.svelte";
 
-  const TaskListData = [
+  export const TaskListData = [
     { ...TaskStories.TaskData, id: "1", title: "Task 1" },
     { ...TaskStories.TaskData, id: "2", title: "Task 2" },
     { ...TaskStories.TaskData, id: "3", title: "Task 3" },
@@ -19,6 +19,7 @@
     component: PureTaskList,
     title: "PureTaskList",
     tags: ["autodocs"],
+    excludeStories: /.*Data$/,
     decorators: [() => MarginDecorator],
     args: {
       ...TaskStories.TaskData.events,

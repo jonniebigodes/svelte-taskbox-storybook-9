@@ -31,7 +31,7 @@
 </script>
 
 {#if loading}
-  <div class="list-items">
+  <div class="list-items" data-testid="loading" id="loading">
     <LoadingRow />
     <LoadingRow />
     <LoadingRow />
