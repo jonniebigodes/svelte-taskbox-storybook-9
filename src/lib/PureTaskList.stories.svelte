@@ -1,7 +1,7 @@
 <script module>
   import { defineMeta } from "@storybook/addon-svelte-csf";
 
-  import TaskList from "./TaskList.svelte";
+  import PureTaskList from "./PureTaskList.svelte";
   import MarginDecorator from "./MarginDecorator.svelte";
 
   import * as TaskStories from "./Task.stories.svelte";
@@ -16,8 +16,8 @@
   ];
 
   const { Story } = defineMeta({
-    component: TaskList,
-    title: "TaskList",
+    component: PureTaskList,
+    title: "PureTaskList",
     tags: ["autodocs"],
     decorators: [() => MarginDecorator],
     args: {
