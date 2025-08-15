@@ -37,9 +37,17 @@
       id={`archiveTask-${task.id}`}
     />
     <span
+      role="button"
       class="checkbox-custom"
       onclick={() => onArchiveTask(task.id ?? "")}
-    />
+      onkeydown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onArchiveTask(task.id ?? "");
+        }
+      }}
+      tabindex="-1"
+    ></span>
   </label>
   <label for={`title-${task.id}`} aria-label={task.title} class="title">
     <input
@@ -49,6 +57,7 @@
       name="title"
       id={`title-${task.id}`}
       placeholder="Input title"
+      style="background-color: red;"
     />
   </label>
   {#if task.state !== "TASK_ARCHIVED"}
@@ -61,7 +70,7 @@
       id={`pinTask-${task.id}`}
       aria-label={`pinTask-${task.id}`}
     >
-      <span class="icon-star" />
+      <span class="icon-star"></span>
     </button>
   {/if}
 </div>
