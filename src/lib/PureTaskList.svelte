@@ -42,7 +42,7 @@
 {#if !loading && noTasks}
   <div class="list-items">
     <div class="wrapper-message">
-      <span class="icon-check" />
+      <span class="icon-check"></span>
       <p class="title-message">You have no tasks</p>
       <p class="subtitle-message">Sit back and relax</p>
     </div>
