@@ -39,6 +39,7 @@
     <span
       role="button"
       class="checkbox-custom"
+      aria-label={`archivedTask-${task.id}`}
       onclick={() => onArchiveTask(task.id ?? "")}
       onkeydown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
